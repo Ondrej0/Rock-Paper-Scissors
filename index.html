@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body class="darkMode">
+
+<!-- Main Menu -->
+    <header><h1 id="title">ROCK PAPER SCISSORS</h1></header>
+
+    <div id="mainMenu">
+        <button class="buttons" onclick="playervscomputer()">Play</button>
+        <button class="buttons" onclick="settings()">Settings</button>
+    </div>
+<!-- Player vs Computer  -->
+    <div id="PlayerVSComputer">
+        <div class="back-button-container"><button class="buttons"onclick="reset(); backToMenu()">&lt;--Back</button></div>
+        <div class="hands">
+            <div class="image-container"><img id="playerImg" src="images\neutral-hand.png"></div>
+            <div class="statsContainer">
+                <h3 id="winStatus">---------</h3>
+                <h4>Score</h4>
+                <h4 id="score">0 - 0</h4>
+            </div>
+            <div class="image-container"><img id="computerImg" src="images\neutral-hand.png"></div>
+        </div>
+        <div><h2 id="chooseText">CHOOSE YOUR MOVE</h2></div>
+        <div id="chooseButtons">
+            <button class="buttons" onclick="choseRock()">ROCK</button>
+            <button class="buttons" onclick="chosePaper()">PAPER</button>
+            <button class="buttons" onclick="choseScissors()">SCISSORS</button>
+        </div>
+        <div id="playButCon"><button class="buttons playButton" onclick="play()">PLAY</button></div>
+    </div>
+
+<!-- Settinsg   -->
+
+    <div id="Settings">
+        <div class="back-button-container"><button class="buttons"onclick="reset(); backToMenu()">&lt;--Back</button></div>
+        <div>
+            <button class="buttons" onclick="lightMode()">Light Mode</button>
+        <button class="buttons" onclick="darkMode()">Dark Mode</button>
+        </div>
+        
+    </div>
+</body>
+</html>

@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.darkMode {
+    /* Set a dark background color as the base */
+    background-color: #1a1a1a;
+    /* Apply a radial gradient */
+    background-image: radial-gradient(circle, 
+                                      rgba(255, 255, 255, 0.021) 0%,  /* Lightest color at the center */
+                                      rgba(26, 26, 26, 0.5) 40%,    /* Intermediate color */
+                                      rgba(26, 26, 26, 1) 100%);    /* Darkest color at the edges */
+    /* Ensure the gradient covers the entire body */
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* Remove any default margins and paddings */
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Ensure the body takes up the full viewport height */
+}
+
+.lightMode {
+    /* Set a dark background color as the base */
+    background: radial-gradient(circle, #ffffff, #f0f0f0, #d9d9d9);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* Remove any default margins and paddings */
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Ensure the body takes up the full viewport height */
+}
+
+
+
+
+/* Header Styles --------------------------------------------------------------------------------------*/
+
+#title{
+    font-size: clamp(20px, 5vw, 70px);
+    font-weight: bold;
+    letter-spacing: 4px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-top: 100px;
+    color: #D3D3D3;
+    display: block;
+}
+
+/* Main Menu Styles--------------------------------------------------------------------------------------*/
+
+#mainMenu{
+    width: 50%;
+    margin: auto;
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    display: flex;
+}
+
+.buttons{
+    width: clamp(300px, 45%, 500px);
+    background-color: #333333; /* Dark background */
+    color: #D3D3D3; /* Light gray font color */
+    border: 2px solid #D3D3D3; /* Light gray border */
+    padding: 10px 20px;
+    font-size: clamp(10px, 4vw, 40px);
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Smooth transitions */
+    cursor: pointer;
+}
+
+.buttons:hover {
+    background-color: #D3D3D3; /* Light gray background on hover */
+    color: #333333; /* Dark font color on hover */
+    border-color: #FFFFFF; /* White border on hover */
+}
+
+/* Main Game Styles--------------------------------------------------------------------------------------*/
+
+#PlayerVSComputer{
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    display: none;
+}
+
+.back-button-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+
+.back-button-container button{
+    width: clamp(100px, 12vw, 200px)
+}
+
+.hands{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: clamp(20px, 10vw, 100px);
+}
+
+.image-container{
+    background-color: white;
+    border-radius: 30px;
+    padding: 20px;
+}
+
+.image-container img{
+    width: clamp(100px, 20vw, 300px);
+    height: clamp(100px, 20vw, 300px);
+   
+}
+
+.hands .image-container:nth-of-type(1) img{
+    transform: scaleX(-1);
+}
+
+#chooseText{
+    font-size: clamp(20px, 5vw, 50px);
+    font-weight: bold;
+    letter-spacing: 4px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: #D3D3D3;
+    margin-top: 50px;
+}
+
+#chooseButtons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: clamp(20px, 4vw, 70px);
+}
+
+#playButCon{
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin-top: 50px;
+}
+
+#playButton{
+    background-color: #835050;
+}
+
+.statsContainer{
+    display: flex;
+    width: clamp(50px, 10vw, 300px);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    color: #D3D3D3;
+    font-size: clamp(20px, 2vw, 40px);
+    text-align: center;
+}
+
+/* Main Game Styles--------------------------------------------------------------------------------------*/
+
+#Settings{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
